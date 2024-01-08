@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 : 회원가입</title>
+    <link rel="stylesheet" href="/css/join.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/check.js"></script>
+
+    <!-- <script src="/public/js/join.js"></script> -->
+    <!-- <script>
+        function road() {
+             const popup = window.open("/address-search","Popup", "width=800, height=700");
+        }
+    </script> -->
+</head>
+
+<body>
+<div class="container">
+    <div class="inner">
+        <h1 class="logo_naver">
+        </h1>
+        <div class="content">
+            <form action="/join_add" id="join_form" method="POST" class="form">
+                <div class="form_content">
+                    <div class="form_section">
+                        <div class="form_list">
+                            <div class="form_item Id" id="divId">
+                                <input type="text" id="email" name="email" placeholder="아이디"
+                                       class="input" maxlength="100" onblur="checkEmail(this.value)" required/>
+                                <div style="padding: 0px;" class="btn_submit_wrap" id="divBtnAuth">
+                                  <button id="Certified" style="font-size: 15px; padding: 5px; width: 82px;" type="button" class="btn_submit" onclick="emailSend()" disabled>인증요청</button>
+                                </div>
+                            </div>
+                            <div class="form_item lock password" id="divPasswd">
+                                <input type="password" id="password" name="password" placeholder="비밀번호" class="input"
+                                       maxlength="20" onblur="checkPassword(this.value, document.getElementById('ConfirmPassword').value)" required/>
+                            </div>
+                            <div class="form_item lock password" id="divConfirm">
+                                <input type="password" id="ConfirmPassword" name="ConfirmPassword" placeholder="비밀번호확인" class="input"
+                                       maxlength="20" onblur="checkPassword(document.getElementById('password').value, this.value)" required/>
+                            </div>
+                            <div class="form_item user" id="divName">
+                              <input type="text" id="nickname" name="nickname" placeholder="닉네임" class="input"
+                                     maxlength="40" required/>
+                            </div>
+                            <div class="form_item calendar" id="divBirthday">
+                              <input type="number" id="birthday" name="birthday" placeholder="태어난년도 4자리 예) 1996" class="input"
+                                     maxlength="4" onblur="checkBirth(this.value)" oninput="periodBirth(this)" required/>
+                            </div>
+                            <div style="padding-right: 10px; display: none;" class="form_item phone" id="PhoneResult">
+                                <input type="number" id="random" name="random" placeholder="인증번호 6자리를 입력하세요." class="input"
+                                       maxlength="6" />
+                                <div style="padding: 0px;" class="btn_submit_wrap" >
+                                    <button id="ResultButton" style="font-size: 15px; padding: 5px; width: 82px;" type="button" class="btn_submit" onclick="randomResult()">인증</button>
+                                </div>
+                            </div>
+                            <input hidden="hidden" type="number" id="randomNumber" value=""/>
+                        </div>
+                        <div class="error_text item_style" id="IdMsg" style="display: none"></div>
+                        <div class="error_text item_style" id="pswd1Msg" style="display: none"></div>
+                        <div class="error_text item_style" id="phoneMsg" style="display: none"></div>
+                        <div class="form_list">
+                            <div class="form_item adult" id="divIdentityGender">
+                                <ul class="adult_list" id="listIdentityGender">
+                                    <li class="radio_item">
+                                        <input type="radio" id="identityGender1" name="gender" value="M"
+                                               class="blind" required>
+                                        <label for="identityGender1">남자</label>
+                                    </li>
+                                    <li class="radio_item">
+                                        <input type="radio" id="identityGender2" name="gender" value="F"
+                                               class="blind" required>
+                                        <label for="identityGender2">여자</label>
+                                    </li>
+                                </ul>
+                                <ul class="adult_list" id="listForeigner">
+                                    <li class="radio_item">
+                                        <input type="radio" id="foreigner1" name="foreigner" value="K" checked
+                                               class="blind">
+                                        <label for="foreigner1">내국인</label>
+                                    </li>
+                                    <li class="radio_item">
+                                        <input type="radio" id="foreigner2" name="foreigner" value="F" class="blind">
+                                        <label for="foreigner2">외국인</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="error_text item_style" id="birthdayMsg" style="display: none"></div>
+                    </div>
+
+                    <div class="btn_submit_wrap" id="divBtnJoin">
+                            <button type="submit" class="btn_submit" id="btnJoin" >가입하기</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+  const periodBirth = (target) => {
+  target.value = target.value.replace(/\D/g, '');
+  if(target.value.length > 4) {
+    target.value = target.value.slice(0, 4);
+  }
+}
+</script>
+</body>
+

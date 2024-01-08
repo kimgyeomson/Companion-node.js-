@@ -1,0 +1,681 @@
+button,
+input,
+textarea {
+    border-radius: 0;
+    border: none;
+    background: 0 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-text-size-adjust: none
+}
+
+button {
+    cursor: pointer
+}
+
+label {
+    cursor: pointer
+}
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    -webkit-text-size-adjust: none
+}
+
+
+
+body {
+    background: #fff
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0
+}
+
+.container {
+    height: 100%;
+    font-size: 0
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%
+}
+
+.content {
+    flex: 1 1 auto;
+    padding-top: 30px
+}
+
+.form {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    height: 100%
+}
+
+.form.btn_fixed {
+    padding-bottom: 92px
+}
+
+.form.btn_fixed .btn_submit_wrap {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background: #fff
+}
+
+.logo_naver {
+    flex: none;
+    padding: 25px 115px 25px 20px
+}
+
+.logo_naver .link {
+    display: inline-block;
+    vertical-align: top
+}
+
+.logo_naver .link::before {
+    background-position: 0 -244px;
+    background-repeat: no-repeat;
+    width: 95px;
+    height: 18px;
+    display: block;
+    content: ''
+}
+
+.form_content {
+    flex: 1 1 auto
+}
+
+.form_content+.form_content {
+    margin-top: 10px
+}
+
+.btn_submit_wrap {
+    flex: none;
+    padding: 20px
+}
+
+
+
+.btn_submit:disabled {
+    background: #256BF4;
+    cursor: default
+}
+
+.form_section {
+    padding: 0 20px
+}
+
+.form_section+.form_section {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid #dfdfdf
+}
+
+
+.form_list {
+    margin-top: 12px
+}
+
+.section_title .point {
+    color: #1A6DFF
+}
+
+.form_list {
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 6px
+}
+
+.form_list+.form_list {
+    margin-top: 10px
+}
+
+.form_list::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    border: 1px solid #c6c6c6;
+    pointer-events: none;
+    content: ''
+}
+
+.form_item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        box-sizing: border-box;
+        max-width: 100%;
+        min-height: 50px;
+        padding: 0 10px 0 45px;
+}
+
+.form_item:first-of-type {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px
+}
+
+.form_item:first-of-type .btn_code {
+    border-top-right-radius: 6px
+}
+
+.form_item:last-of-type {
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px
+}
+
+.form_item:last-of-type .btn_code {
+    border-bottom-right-radius: 6px
+}
+
+.form_item+.form_item {
+    margin-top: -1px
+}
+
+.form_item.user.on::before {
+    background-position: -224px -264px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px
+}
+
+.form_item.user.error::before {
+    background-position: -160px -264px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px
+}
+
+.form_item.user::before {
+    background-position: -96px -296px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px
+}
+
+.form_item.lock.on::before {
+    background-position: -128px -264px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px
+}
+
+.form_item.lock.error::before {
+    background-position: -96px -264px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px
+}
+
+.form_item.lock::before {
+    background-position: -64px -264px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px
+}
+
+.form_item.Id.on::before {
+    background-position: -310px -32px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px
+}
+
+.form_item.Id.error::before {
+    background-position: -310px -96px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px
+}
+
+.form_item.Id::before {
+    background-position: -310px -160px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px
+}
+
+.form_item.calendar.on::before {
+    background-position: -310px -64px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px
+}
+
+.form_item.calendar.error::before {
+    background-position: -310px -192px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px
+}
+
+.form_item.calendar::before {
+    background-position: 0 -296px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px
+}
+
+.form_item.telecom.on::before {
+    background-position: -310px -224px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px
+}
+
+.form_item.telecom.focus {
+    z-index: 11
+}
+
+.form_item.telecom.error::before {
+    background-position: -310px -256px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px
+}
+
+.form_item.telecom::before {
+    background-position: -64px -296px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.form_item.phone {
+    padding-right: 94px;
+    padding:0 10px 0 45px;
+}
+.form_item.Id {
+    padding:0 10px 0 45px;
+}
+
+#divPasswd {
+    padding:0 10px 0 45px;
+}
+
+#divConfirm {
+    padding:0 10px 0 45px;
+}
+
+.form_item.user {
+    padding:0 10px 0 45px;
+}
+
+.form_item.calendar {
+    padding:0 10px 0 45px;
+}
+
+.form_item.telecom {
+    padding:0 10px 0 45px;
+}
+
+.adult_list {
+    display:flex;
+}
+
+.form_item.phone.on::before {
+    background-position: -256px -264px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px
+}
+
+.form_item.phone.error::before {
+    background-position: -310px -128px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px
+}
+
+.form_item.phone::before {
+    background-position: -216px -96px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px
+}
+
+.form_item.adult {
+    padding: 0 10px 0 1px
+}
+
+.form_item.adult::before {
+    content: none
+}
+
+.form_item.gender {
+    padding: 0 10px
+}
+
+.form_item.gender::before {
+    content: none
+}
+
+
+.form_item.error,
+.form_item.focus {
+    z-index: 10;
+    margin-top: -2px
+}
+
+.form_item.focus::after {
+    border: 2px solid #09aa5c
+}
+
+.form_item.error::after {
+    border: 2px solid #ff3f3f
+}
+
+.form_item.error .placeholder,
+.form_item.error .select {
+    color: #ff3f3f;
+    text-decoration: underline
+}
+
+.form_item.error .input {
+    color: #ff3f3f;
+    text-decoration: underline
+}
+
+.form_item.error .input::-moz-placeholder {
+    color: #ff3f3f
+}
+
+.form_item.error .input:-ms-input-placeholder {
+    color: #ff3f3f
+}
+
+.form_item.error .input::placeholder {
+    color: #ff3f3f
+}
+
+.form_item::before {
+    position: absolute;
+    top: 10px;
+    left: 9px;
+    content: ''
+}
+
+.form_item::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    border: 1px solid #dfdfdf;
+    pointer-events: none;
+    content: ''
+}
+
+.form_item::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    border: 1px solid #dfdfdf;
+    pointer-events: none;
+    content: ''
+}
+
+
+.input {
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 16px;
+    line-height: 22px;
+    color: #222
+}
+
+.input::-moz-placeholder {
+    font-size: 15px;
+    color: #929294
+}
+
+.input:-ms-input-placeholder {
+    font-size: 15px;
+    color: #929294
+}
+
+.input::placeholder {
+    font-size: 15px;
+    color: #929294
+}
+
+
+
+.radio_item {
+    display: inline-block;
+    vertical-align: top
+}
+
+.radio_item+.radio_item {
+    margin-left: -1px
+}
+
+.radio_item:first-of-type {
+    border-radius: 4px 0 0 4px
+}
+
+.radio_item:last-of-type {
+    border-radius: 0 4px 4px 0
+}
+
+.radio_item input:checked+label {
+    z-index: 1;
+    border-color: #1A6DFF;
+    font-weight: 500;
+    color: #1A6DFF;
+}
+
+.radio_item label {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 6px 0;
+    border-radius: inherit;
+    border: 1px solid #c6c6c6;
+    font-size: 13px;
+    line-height: 18px;
+    color: #929294;
+    text-align: center
+}
+
+
+.btn_telecom {
+    position: relative;
+    width: 100%;
+    padding-right: 30px;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -.8px;
+    color: #222;
+    text-align: left
+}
+
+.btn_telecom[aria-expanded=true]+.telecom_menu {
+    display: block
+}
+
+.btn_telecom[aria-expanded=true]::after {
+    transform: rotate(180deg)
+}
+
+.btn_telecom .placeholder {
+    font-size: 15px;
+    color: #929294
+}
+
+.adult_list {
+    box-sizing: border-box;
+    width: 50%;
+    padding-left: 9px
+}
+
+.adult_list.error .radio_item label {
+    border-color: #ff3f3f;
+    color: #ff3f3f;
+    text-decoration: underline
+}
+
+.adult_list .radio_item {
+    width: 50%
+}
+
+.error_text {
+    margin: 10px 4px 0;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.error_text.item_style {
+    position: relative;
+    padding-left: 8px
+}
+
+.error_text.item_style+.item_style {
+    margin-top: 0
+}
+
+.error_text.item_style::before {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #dfdfdf;
+    content: ''
+}
+
+.error_text+.form_list {
+    margin-top: 10px
+}
+
+@media (min-width:768px) {
+    .inner {
+        width: 500px;
+        margin: 0 auto
+    }
+
+    .inner.no_margin {
+        width: 100%
+    }
+
+    .inner.no_margin .logo_naver {
+        box-sizing: border-box;
+        width: 500px;
+        margin: 0 auto
+    }
+
+    .form_section {
+        margin-right: 20px;
+        margin-left: 20px;
+        padding-right: 0;
+        padding-left: 0
+    }
+
+    .admit_tab .tab_item:last-of-type {
+        position: relative
+    }
+
+    .admit_tab .tab_item:last-of-type::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 1px;
+        height: 20px;
+        margin-top: -10px;
+        background: #d3d3d4;
+        content: ''
+    }
+
+    .admit_tab .tab {
+        text-align: center
+    }
+
+    .welcome_wrap .intro {
+        flex: none;
+        padding-top: 120px
+    }
+
+    .welcome_wrap .intro br {
+        display: none
+    }
+
+    .welcome_wrap .service_list_wrap {
+        flex: 1 1 auto
+    }
+
+    .welcome_wrap .service_list {
+        max-width: 466px
+    }
+
+    .welcome_wrap .service_item {
+        width: 66px
+    }
+
+    .welcome_wrap .service_item+.service_item {
+        margin-left: 14px
+    }
+
+    .form.btn_fixed .btn_submit_wrap {
+        width: 460px;
+        margin: 0 auto
+    }
+}
+
+.form_item.calendar.error::before,
+.form_item.calendar.on::before,
+.form_item.calendar::before,
+.form_item.Id.error::before,
+.form_item.Id.on::before,
+.form_item.Id::before,
+.form_item.lock.error::before,
+.form_item.lock.on::before,
+.form_item.lock::before,
+.form_item.phone.error::before,
+.form_item.phone.on::before,
+.form_item.phone::before,
+.form_item.telecom.error::before,
+.form_item.telecom.on::before,
+.form_item.telecom::before,
+.form_item.user.error::before,
+.form_item.user.on::before,
+.form_item.user::before {
+    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_4c092b41.png);
+    background-size: 340px 326px;
+    background-repeat: no-repeat
+}
+
+.btn_submit {
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,.05);
+    background: #1A6DFF;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #fff;
+}
